@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+    <title>Movie Review</title>
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="JavaScript.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/ie-support/html5.js"></script>
+    <script src="js/ie-support/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="site-content">
+        <header class="site-header">
+            <div class="container">
+                <a href="index.html" id="branding">
+                    <img src="images/logo.png" alt="" class="logo">
+                    <div class="logo-copy">
+                        <h1 class="site-title">Movie World</h1>
+                        <small class="site-description">Movie search website</small>
+                    </div>
+                </a>
+                <div class="main-navigation">
+                    <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="menu">
+                        <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="analytics.html">Analytics</a></li>
+                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    </ul> <!-- .menu -->
+                    <form action="#" class="search-form">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                </div> <!-- .main-navigation -->
+                <div class="mobile-navigation"></div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container-fluid" id="right-sidebar">
+
+                <form action="#" id="form_id" class="form_id" onsubmit="myFunction()">
+                    <h3>Please select Movie Category:</h3>
+                    <input type="checkbox" class="Uncheck_class" name="category" value="All"> All<br>
+                    <input type="checkbox" class="check_class" name="category" value="Thriller"> Thriller &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" class="check_class" name="category" value="Drama & Romance"> Drama & Romance<br>
+                    <input type="checkbox" class="check_class" name="category" value="Crime"> Crime &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" class="check_class" name="category" value="Adventure"> Adventure<br>
+                    <input type="checkbox" class="check_class" name="category" value="Science Fiction"> Science Fiction &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" class="check_class" name="category" value="Drama"> Drama<br>
+                    <input type="checkbox" class="check_class" name="category" value="Comedy"> Comedy &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" class="check_class" name="category" value="Romance & Comedy"> Romance & Comedy<br>
+                    <input type="checkbox" class="check_class" name="category" value="Documentary"> Documentary &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" class="check_class" name="category" value="Fantasy"> Fantasy<br>
+                    <input type="checkbox" class="check_class" name="category" value="Romance"> Romance &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" class="check_class" name="category" value="Mystery"> Mystery<br>
+                    <input type="checkbox" class="check_class" name="category" value="Horror"> Horror &nbsp;&nbsp;&nbsp;&nbsp;
+                    <br />
+                    <br />
+                    <br />
+                    <h3>Please select Movie ratings:</h3>
+                    <input type="radio" name="ratings" value="3">3<br>
+                    <input type="radio" name="ratings" value="5">5<br>
+                    <input type="radio" name="ratings" value="10">10<br>
+                    <br />
+                    <br />
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <!--<div class="container" style="width:70%; margin-left:5%">
+        <div class="row">
+                <div class="feature">
+                    <h3 class="feature-title">Exceptur cupidat</h3>
+                    <small class="feature-subtitle">Incididunt labore dolore</small>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aut ad optio praesentium amet, ullam vel impedit dignissimos voluptas, consequatur recusandae quo autem consectetur tempore rem quam corrupti a. Accusamus.</p>
+                    <a href="" class="button">Send a request</a>
+                </div>
+            </div>
+        <div class="row">
+            <div class="feature">
+                <h3 class="feature-title">Neque quisquam</h3>
+                <small class="feature-subtitle">Duis aute reprehenderit</small>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta aperiam quidem nobis rem exercitationem aut assumenda iure molestias eius accusantium, temporibus quis esse tempora. Laboriosam libero odio nobis, eligendi minus.</p>
+                <a href="" class="button">Send a request</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="feature">
+                <h3 class="feature-title">Tempor Labore</h3>
+                <small class="feature-subtitle">Ratione sequi nesciunt</small>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo commodi impedit ea beatae, in ipsa doloribus consequuntur ut, quod dolor dolore unde, esse eligendi autem nobis rem tempora recusandae laborum.</p>
+                <a href="" class="button">Send a request</a>
+            </div>
+        </div>
+        </div>-->
+            <div class="breadcrumbs" style="margin-left:5%">>
+                <a href="index.html">Home</a>
+                <span>Movie data</span>
+            </div>
+            <div class="container" style="width:70%; margin-left:3%">
+                <div class="feature" itemscope itemtype="http://schema.org/Movie">
+                    <h4 itemprop="name" class="feature-title">Gladiator</h4>
+                    <span id="imdb_ratings">7.9</span>
+                    <small class="feature-subtitle">English</small><span itemprop="genre">Action</span>
+                    <p>
+                        Universal Pictures
+                    </p>
+                    <p>In the year 180'-' the death of emperor Marcus Aurelius throws the Roman Empire into chaos. Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor. As Marcus' devious son Commodus ascends to the throne'-' Maximus is set to be executed. He escapes'-' but is captured by slave traders. Renamed Spaniard and forced to become a gladiator'-' Maximus must battle to the death with other men for the amusement of paying audiences. His battle skills serve him well'-' and he becomes one of the most famous and admired men to fight in the Colosseum. Determined to avenge himself against the man who took away his freedom and laid waste to his family'-' Maximus believes that he can use his fame and skill in the ring to avenge the loss of his family and former glory. As the gladiator begins to challenge his rule'-' Commodus decides to put his own fighting mettle to the test by squaring off with Maximus in a battle to the death.</p>
+                </div>
+                <div class="feature" itemscope itemtype="http://schema.org/Movie">
+                    <h4 itemprop="name" href="" class="feature-title">The Lord of the Rings: The Fellowship of the Ring</h4>
+                    <span id="imdb_ratings">7.9</span>
+                    <small class="feature-subtitle">English</small><span itemprop="genre">Action</span>
+                    <p>
+                        WingNut Films
+                    </p>
+                    <p>
+                        Young hobbit Frodo Baggins'-' after inheriting a mysterious ring from his uncle Bilbo'-' must leave his home in order to keep it from falling into the hands of its evil creator. Along the way'-' a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom'-' the only place where it can be destroyed.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">About Us</h3>
+                            <p>Cloud Technologies Assignment 2, Group members Vedang, Darshan, Apurva, Aaditi and Sayli</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Recent Review</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">Bollywood</a></li>
+                                <li><a href="#">Hollywood</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Social Media</h3>
+                            <ul class="no-bullet">
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">Newsletter</h3>
+                            <form action="#" class="subscribe-form">
+                                <input type="text" placeholder="Email Address">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="colophon">Copyright 2019 Cloud Technologies Assignment 2, Designed by Vedang,Darshan,Apurva Aaditi and Sayli. All rights aren't reserved</div>
+            </div> <!-- .container -->
+        </footer>
+    </div>
+    <!-- Default snippet for navigation -->
+
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
